@@ -1,0 +1,32 @@
+POST  https://ufgov93mdl.execute-api.us-east-1.amazonaws.com/dev/v1/createUtente
+
+{
+    "codicefiscale": "CLLDDKKDKD",
+    "nome": "ilnome",
+    "cognome": "ilcognome",
+    "email": "lamail",
+    "recapitoTelefonico": "366123456"
+}
+
+###
+GET https://ufgov93mdl.execute-api.us-east-1.amazonaws.com/dev/v1/getAllUtenti
+
+###
+GET  https://ufgov93mdl.execute-api.us-east-1.amazonaws.com/dev/v1/getUtente/CLLDDKKDKD
+
+
+
+###
+PUT  https://ufgov93mdl.execute-api.us-east-1.amazonaws.com/dev/v1/updateUtente/CLLDDKKDKD
+
+{
+    "codicefiscale": "CLLDDKKDKD",
+    "nome": "ilnome",
+    "cognome": "ilcognome",
+    "email": "lamail",
+    "recapitoTelefonico": "newnumber"
+}
+
+###
+DELETE  https://ufgov93mdl.execute-api.us-east-1.amazonaws.com/dev/v1/deleteUtente/CLLDDKKDKD
+
