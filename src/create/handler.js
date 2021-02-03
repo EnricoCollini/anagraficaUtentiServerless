@@ -31,7 +31,8 @@ module.exports.create = async (event, context) => {
             cognome: bodyObj.cognome,
             email: bodyObj.email,
             recapitoTelefonico: bodyObj.recapitoTelefonico
-        }
+        },
+        ConditionExpression: "attribute_not_exists(codicefiscale)"
     }
     let putResult = {}
     try {

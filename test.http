@@ -3,7 +3,7 @@ POST  https://ufgov93mdl.execute-api.us-east-1.amazonaws.com/dev/v1/createUtente
 {
     "codicefiscale": "CLLDDKKDKD",
     "nome": "ilnome",
-    "cognome": "ilcognome",
+    "cognome": "ilcbognome",
     "email": "lamail",
     "recapitoTelefonico": "366123456"
 }
