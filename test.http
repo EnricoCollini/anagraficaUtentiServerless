@@ -1,7 +1,7 @@
 POST  https://ufgov93mdl.execute-api.us-east-1.amazonaws.com/dev/v1/createUtente
 
 {
-    "codicefiscale": "CLLDDKKDKD",
+    "codicefiscale": "CDLLDKKDKD",
     "nome": "ilnome",
     "cognome": "ilcbognome",
     "email": "lamail",
@@ -12,7 +12,7 @@ POST  https://ufgov93mdl.execute-api.us-east-1.amazonaws.com/dev/v1/createUtente
 GET https://ufgov93mdl.execute-api.us-east-1.amazonaws.com/dev/v1/getAllUtenti
 
 ###
-GET  https://ufgov93mdl.execute-api.us-east-1.amazonaws.com/dev/v1/getUtente/CLLDDKKDKD
+GET  https://ufgov93mdl.execute-api.us-east-1.amazonaws.com/dev/v1/getUtente/CLLLDKKDKD
 
 
 

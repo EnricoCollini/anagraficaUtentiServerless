@@ -16,6 +16,27 @@ provider:
         - dynamodb:UpdateItem
         - dynamodb:DeleteItem
       Resource: arn:aws:dynamodb:#{AWS::Region}:#{AWS::AccountId}:table/anagraficaUtentiTable
+  apiKeys:
+    - free:
+        - myFreeApiKey
+    - paid:
+        - myPaidApiKey
+  usagePlan:
+    - free:
+        quota:
+          limit: 1000
+          period: MONTH
+        throttle:
+          rateLimit: 5
+          burstLimit: 20 
+    - paid:
+        quota:
+          limit: 10000
+          period: MONTH
+        trottle:
+          rateLimit: 10
+          burstLimit: 30 
+
 
 
 environment:
@@ -33,30 +54,41 @@ functions:
       - http:
           path: /v1/createUtente
           method: post
+          cors: true
+          private: true 
   list:
     handler: ./src/read/handler.list
     events:
       - http:
           path: /v1/getAllUtenti
           method: get
+          cors: true
+          private: true 
+          
   get:
     handler: ./src/read/handler.get
     events:
       - http:
           path: /v1/getUtente/{codicefiscale}
           method: get
+          cors: true
+          private: true 
   update:
     handler: ./src/update/handler.update
     events:
       - http:
           path: /v1/updateUtente/{codicefiscale}
           method: put
+          cors: true
+          private: true 
   delete:
     handler: ./src/delete/handler.delete
     events:
       - http:
           path: /v1/deleteUtente/{codicefiscale}
           method: delete
+          cors: true
+          private: true 
 
 resources:
   Resources:
